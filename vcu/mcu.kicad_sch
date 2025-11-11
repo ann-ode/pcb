@@ -7807,6 +7807,18 @@
 		)
 		(uuid "023e41f0-b67a-44c0-9709-dda2efb1f442")
 	)
+	(text "Planned changes:\n- higher clock\n- smaller JTAG header (6 pin micro)\n- remove 7 seg\n- remove uart\n- change to CANFD/-+58V fault compat can trancivers\n- add transient protection to can trancivers\n- add rs232/3rd can \n- add sd card\n- fix grounding\n- add pads for boot\n- smaller rst button\n- faster clock\n- add temp sensor\n- add imu?\n- add eeprom\n- add header for expansion slot with\n  periherals and GPIO"
+		(exclude_from_sim no)
+		(at 185.928 74.422 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "1b4c6e6c-4c4e-4ffd-a56c-083e2784b632")
+	)
 	(text "Decoupling Capacitors"
 		(exclude_from_sim no)
 		(at 191.008 21.844 0)
@@ -7817,6 +7829,18 @@
 			(justify left bottom)
 		)
 		(uuid "2633126c-2550-4593-8698-71c3d32844d8")
+	)
+	(text "Because:\n- Remove excess debug for space\n- Not needed during running\n- Using expansion slots debug can be accessed\n  when needed\n- Faster clock, CANFD, IMU for future proofing\n- EEPROM for config flashing\n- Boot pad for space\n- Keeping jtag cuz goated\n- SD card for logging\n- temp sensor so board can have thermal shutoff/reg\n  the h7/f7 do have internal ones but they r shit"
+		(exclude_from_sim no)
+		(at 230.886 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "31762045-c148-4d7c-8b1c-4111de5ef98a")
 	)
 	(text "default I2C address\n0x70"
 		(exclude_from_sim no)

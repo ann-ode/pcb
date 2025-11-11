@@ -2435,6 +2435,18 @@
 		)
 		(uuid "5dc40272-6f34-42a6-a4cc-be253050a14c")
 	)
+	(text "Planned changes:\n- add zenner+fet reverse protection \n- decide if using a powerplexer for 5v in opt\n- unify grounds\n- remove option to power sensors from vcu\n- rename power nets \n- add 12v -> 5v buck\n- add 5v -> 3.3v ldo\nOR\n- add 12V -> 3.3v ldo/buck\n- add fuckass inductor\n\nBecause:\n- stop people frying board\n- vcu is a single point failure, any excess power\n  stuff like the sensor supply should be seperated\n- sensors should instead be powered from a REGULATED,\n  CONTINUOUS supply, ie a Sensor Power Module in the dash\n- +12V is NOT 12V AS IT IS STRAIGHT OFF THE BATTERY AND \n  NOT REGULATED!!! Will rename nets to convey this"
+		(exclude_from_sim no)
+		(at 150.114 111.252 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "616d5feb-a346-4ca1-ab61-b22a0666d850")
+	)
 	(text "VBUS = 5V"
 		(exclude_from_sim no)
 		(at 165.862 50.546 0)

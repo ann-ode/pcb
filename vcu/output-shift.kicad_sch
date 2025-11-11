@@ -1864,6 +1864,18 @@
 		)
 		(uuid "792a03e9-de2f-44cc-a433-7b798d0e2286")
 	)
+	(text "Planned changes:\n- double output channels and intergrate with fet array on main\n- decide if to use fets or optoisos\n- could have all the same or low speed and high speed options\n- might add 5v input capabilities\n\nBecause:\n- channels can be multipurpose\n- space saving\n- switching speed"
+		(exclude_from_sim no)
+		(at 24.13 101.854 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "d25353f0-7b18-4658-995a-6f6923df3341")
+	)
 	(text "Practical tests \nput the maximum\nopto switching \nfrequency at\nabout 10kHz"
 		(exclude_from_sim no)
 		(at 78.105 38.1 0)

@@ -2610,6 +2610,18 @@
 		)
 		(uuid "4ccc5619-3452-41e9-9319-0c2ebb20bb42")
 	)
+	(text "Planned changes:\n- check if optoiso is the best choice\n- swap for a much smaller package\n- double number of inputs\n\nWhy:\n- future proofing\n- space will be an issue on this board, so \n  trying to keep things neat\n"
+		(exclude_from_sim no)
+		(at 256.032 111.252 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "4f89d04b-e093-477d-8a45-51d017e4dbbb")
+	)
 	(text "The worst noise in the system\nis from the inverter at 12kHz\n\nThese signals change quite\nslowly in comparison, so the\ncut-off frequency can be low\n\nFilters can be bypassed\nwith a 0R resistor and no\ncapacitor"
 		(exclude_from_sim no)
 		(at 53.34 99.695 0)
@@ -2620,6 +2632,18 @@
 			(justify left bottom)
 		)
 		(uuid "81e0280d-2b3e-423a-9e7d-2e2ec1d650ad")
+	)
+	(text "Planned changes:\n- double number of channels\n- proper input clamping\n- use 2.5vref\n- make input voltage configurable via jumpers\n- add spice sims\n- add more filter stages\n- unify grounds\n\nBecause:\n- make readings nicer (anti-aliasing)\n- protect from transience\n- any sensor can be connected up to each channel\n  so more cusomisable"
+		(exclude_from_sim no)
+		(at 166.624 51.816 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "acdd79f6-559b-4034-b6f6-a2f92aa8d584")
 	)
 	(text "f_{c} = 1.5kHz"
 		(exclude_from_sim no)

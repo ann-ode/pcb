@@ -20846,7 +20846,7 @@
 	(footprint "Package_QFP:LQFP-144_20x20mm_P0.5mm"
 		(layer "F.Cu")
 		(uuid "890e68b7-5201-4336-be6d-79d8a5a13020")
-		(at 223.139 122.428)
+		(at 223.139 119.5)
 		(descr "LQFP, 144 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#page=425), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "LQFP QFP")
 		(property "Reference" "U6"
@@ -39198,7 +39198,7 @@
 		(property "Reference" "C14"
 			(at 0 -1.68 90)
 			(layer "F.SilkS")
-			(uuid "62df8269-5df7-4d6e-910f-66858eb74b04")
+			(uuid "8737e1fe-3beb-4d9f-b596-de893e2e7792")
 			(effects
 				(font
 					(size 1 1)
@@ -39209,7 +39209,7 @@
 		(property "Value" "4.3p"
 			(at 0 1.68 90)
 			(layer "F.Fab")
-			(uuid "54e5d9a3-1c52-4510-9535-14ef0e3dd5d0")
+			(uuid "0f8136bd-d28a-4d69-9304-e80102847a35")
 			(effects
 				(font
 					(size 1 1)
@@ -39221,7 +39221,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f508592a-5729-48ab-bded-754314ec150f")
+			(uuid "45aeffa3-2092-4981-9fff-4a2b56e24c51")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39233,7 +39233,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "837a31bb-8aa0-457f-a8a1-6d93a12c71db")
+			(uuid "979b595b-e4c6-47e5-b227-9baf24003ccb")
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -2919,6 +2919,18 @@
 		)
 		(uuid "ba2353db-01ea-449d-80b5-0b3e35162306")
 	)
+	(text "Planned changes:\n- add test points\n- fix analog setup\n- remove analog supply\n- redo schematic formatting to improve\n  readability\n- unify connectors\n- add expansion header for modularity\n\nBecause:\n- better protect board from transience\n- make loom making easier\n- future proof board\n- splitting grounds is extremely difficult to do\n  and not nessacary in this use case\n- test points to assist debug\n"
+		(exclude_from_sim no)
+		(at 156.464 46.482 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "bd095c68-a264-461b-8b3a-6b96f1fbdb40")
+	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
 		(at 59.944 21.59 0)
