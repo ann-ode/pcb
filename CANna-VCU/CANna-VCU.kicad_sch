@@ -1,0 +1,224 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "d2b041cf-e68d-49d7-b31d-fe6ebce83d7e")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 44.45 85.09)
+		(size 53.34 57.15)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1b41b139-095c-4084-b93a-58b03562937d")
+		(property "Sheetname" "Protected IO"
+			(at 44.45 84.3784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vcu_proio.kicad_sch"
+			(at 44.45 142.8246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 193.04 33.02)
+		(size 66.04 26.67)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2cf44fa6-1178-4df0-b6ad-8fb28a6c1e81")
+		(property "Sheetname" "ADC"
+			(at 193.04 32.3084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vcu_adc.kicad_sch"
+			(at 193.04 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 33.02)
+		(size 45.72 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "33c87969-d543-4809-83eb-5f9a35fc6ce2")
+		(property "Sheetname" "Power"
+			(at 35.56 32.3084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vcu_power.kicad_sch"
+			(at 35.56 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 119.38 49.53)
+		(size 35.56 41.91)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "92c190b0-cb7c-4416-a15b-38caa0d4babc")
+		(property "Sheetname" "MCU"
+			(at 119.38 48.8184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vcu_mcu.kicad_sch"
+			(at 119.38 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 191.77 81.28)
+		(size 49.53 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e20bcd50-e953-4e5c-b1c5-a9c9ec609e53")
+		(property "Sheetname" "CAN"
+			(at 191.77 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vcu_can.kicad_sch"
+			(at 191.77 113.6146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

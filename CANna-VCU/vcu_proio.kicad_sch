@@ -1,0 +1,32 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "78618bdf-d518-4ce1-a475-d0924560b7f8")
+	(paper "A4")
+	(lib_symbols)
+	(text "Planned changes:\n- double output channels and intergrate with fet array on main\n- decide if to use fets or optoisos\n- could have all the same or low speed and high speed options\n- might add 5v input capabilities\n\nBecause:\n- channels can be multipurpose\n- space saving\n- switching speed"
+		(exclude_from_sim no)
+		(at 17.78 180.594 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "1cc12b82-249d-4585-aff5-f87be09e0f7d")
+	)
+	(text "Planned changes:\n- check if optoiso is the best choice\n- swap for a much smaller package\n- double number of inputs\n\nWhy:\n- future proofing\n- space will be an issue on this board, so \n  trying to keep things neat\n"
+		(exclude_from_sim no)
+		(at 91.948 178.054 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 153 0 1)
+			)
+			(justify left)
+		)
+		(uuid "55060cfd-db86-47a2-9c13-400c4c41ebee")
+	)
+)
