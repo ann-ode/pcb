@@ -373,27 +373,39 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SUFST:TCAN34004-Q1"
+		(symbol "Interface_CAN_LIN:LTC2875-DD"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at 0 0 0)
+				(at -10.16 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "TCAN3400-Q1"
-				(at 8.128 9.144 0)
+			(property "Value" "LTC2875-DD"
+				(at 2.54 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/2875f.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -402,7 +414,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tcan3404-q1.pdf?ts=1762412095981&ref_url=https%253A%252F%252Fwww.mouser.de%252F"
+			(property "Description" "High-Speed CAN Transceiver, 4Mbps, 3.3V or 5V supply, DFN-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -411,7 +423,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "CAN Tranceiver 58V Tolerant"
+			(property "ki_keywords" "High-Speed CAN Transceiver"
 				(at 0 0 0)
 				(effects
 					(font
@@ -420,7 +432,16 @@
 					(hide yes)
 				)
 			)
-			(symbol "TCAN34004-Q1_0_1"
+			(property "ki_fp_filters" "DFN*1EP*3x3mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LTC2875-DD_0_1"
 				(rectangle
 					(start -10.16 7.62)
 					(end 10.16 -7.62)
@@ -433,7 +454,7 @@
 					)
 				)
 			)
-			(symbol "TCAN34004-Q1_1_1"
+			(symbol "LTC2875-DD_1_1"
 				(pin input line
 					(at -12.7 5.08 0)
 					(length 2.54)
@@ -452,7 +473,7 @@
 						)
 					)
 				)
-				(pin tri_state line
+				(pin output line
 					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "RXD"
@@ -471,27 +492,9 @@
 					)
 				)
 				(pin input line
-					(at -12.7 -2.54 0)
-					(length 2.54)
-					(name "SHDN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -12.7 -5.08 0)
 					(length 2.54)
-					(name "STB"
+					(name "RS"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -542,6 +545,25 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin bidirectional line
 					(at 12.7 2.54 180)
 					(length 2.54)
@@ -553,6 +575,24 @@
 						)
 					)
 					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "SPLIT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -718,6 +758,19 @@
 		)
 		(uuid "42cbce3e-9671-46fd-87c2-70ac8696b25a")
 	)
+	(text "TODO \n\n- add tvs?\n- add choke?\n- add notes\n- add rs232 tranciver\n- add some way of setting termination easily\n- formatting\n- notes"
+		(exclude_from_sim no)
+		(at 43.18 99.314 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "b62892b2-e7f8-4a81-9a71-1836538603d7")
+	)
 	(text "CAN bus operating at 1MHz\n\n1.1MHz corner frequency\n\n  R = 60 || 60 = 30 ohms\n  T = RC = 141 ns\n  f = 1/(2*pi*T) = 1.13 MHz\n"
 		(exclude_from_sim no)
 		(at 40.386 58.674 0)
@@ -741,616 +794,584 @@
 		(uuid "bc076e36-ad20-4183-84f5-c96bf82c594a")
 	)
 	(junction
-		(at 161.29 55.88)
+		(at 146.05 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "18aecb29-28f6-405a-a021-dce89d1ad01d")
+		(uuid "1629e3ba-c99e-44c1-9ed4-66eb26595e53")
 	)
 	(junction
-		(at 162.56 106.68)
+		(at 170.18 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "75007631-13c8-4235-897a-61054a3eacad")
+		(uuid "1ecc3298-b7c5-4c4f-853b-deaba36f8719")
 	)
 	(junction
-		(at 162.56 139.7)
+		(at 170.18 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bd7fd249-f66f-4c4b-8139-994f48032e4f")
+		(uuid "2dafb18a-3c82-4295-8fc3-19f0c93a530b")
 	)
 	(junction
-		(at 162.56 123.19)
+		(at 170.18 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c8986c60-9eca-425a-a9e7-9022703949f3")
+		(uuid "38800b3f-48ea-45f5-b3b8-0c1c1172e69e")
 	)
 	(junction
-		(at 161.29 39.37)
+		(at 170.18 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d7e54aee-f6c6-4b1a-95ec-1e2be6ca6fbb")
+		(uuid "446c3c25-49af-4791-a2e7-31a069d4ce13")
 	)
 	(junction
-		(at 161.29 72.39)
+		(at 146.05 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "df3849cb-78b1-4bce-b6d5-2d47f60911a8")
+		(uuid "55262b42-3487-4e4b-9bdd-f76ec54cd227")
 	)
 	(junction
-		(at 139.7 100.33)
+		(at 170.18 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e0e310aa-d183-4137-b157-6a97b5dc47eb")
+		(uuid "78af51e9-8a56-4caf-9ad0-ee1030f33b36")
 	)
 	(junction
-		(at 138.43 33.02)
+		(at 170.18 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f90bc52d-36fd-4458-964c-cd818efef98b")
+		(uuid "9ed4d83f-1fbf-470f-ba63-c6ff2a19fdb4")
 	)
 	(wire
 		(pts
-			(xy 115.57 125.73) (xy 127 125.73)
+			(xy 158.75 116.84) (xy 165.1 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "028a7918-ec5f-476f-8b70-12b4c0c2c3ff")
+		(uuid "0ba1a99a-6545-4f8c-a22d-260f021154df")
 	)
 	(wire
 		(pts
-			(xy 156.21 39.37) (xy 161.29 39.37)
+			(xy 158.75 66.04) (xy 165.1 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0afa2b66-175f-40be-84cc-1ebdf53a7f41")
+		(uuid "0fd7fd34-fbba-4b5e-b1c6-ed9cd30e04fe")
 	)
 	(wire
 		(pts
-			(xy 162.56 123.19) (xy 162.56 124.46)
+			(xy 165.1 80.01) (xy 170.18 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "117f994c-4047-440b-bff7-53b1a3ff8f37")
+		(uuid "21a3f016-28d5-4f4b-b309-d9343c857414")
 	)
 	(wire
 		(pts
-			(xy 152.4 120.65) (xy 157.48 120.65)
+			(xy 170.18 119.38) (xy 177.8 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "15e6a07f-7823-4ba1-a5c1-b45ff96d33ee")
+		(uuid "231b9ccf-47a8-4b9d-abdc-d4b43c08de6c")
 	)
 	(wire
 		(pts
-			(xy 139.7 97.79) (xy 139.7 100.33)
+			(xy 140.97 99.06) (xy 140.97 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "18268c28-a5b3-4fdf-8289-0509adb800ba")
+		(uuid "2619c200-da3f-4caf-856e-8015a893bfa1")
 	)
 	(wire
 		(pts
-			(xy 156.21 58.42) (xy 156.21 72.39)
+			(xy 170.18 57.15) (xy 170.18 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1f1003ea-b90b-46ab-9b5e-f87485608691")
+		(uuid "2e60b216-500e-45be-9257-22e48077f1c7")
 	)
 	(wire
 		(pts
-			(xy 114.3 62.23) (xy 114.3 58.42)
+			(xy 146.05 95.25) (xy 146.05 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "218273d9-b3c5-4f2f-be2c-4f103a861724")
+		(uuid "2e921690-b9fd-47ec-ba6c-e2bfada0576c")
 	)
 	(wire
 		(pts
-			(xy 110.49 53.34) (xy 125.73 53.34)
+			(xy 170.18 118.11) (xy 170.18 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "26893ae9-b982-4fde-9e6c-366d89ac12a7")
+		(uuid "2e942322-1cc1-4722-bf3f-66684abc0476")
 	)
 	(wire
 		(pts
-			(xy 138.43 33.02) (xy 138.43 45.72)
+			(xy 165.1 121.92) (xy 165.1 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2db2f4ba-68b0-4648-8ae5-5dafb2554eeb")
+		(uuid "2f10e049-4834-47d7-a2fa-540ef9e6a44a")
 	)
 	(wire
 		(pts
-			(xy 114.3 58.42) (xy 125.73 58.42)
+			(xy 177.8 64.77) (xy 177.8 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "31dc6b85-0e79-4791-be43-ed53d1534722")
+		(uuid "36c00cb4-4ae5-4891-a018-f2ee703a1cc5")
 	)
 	(wire
 		(pts
-			(xy 168.91 62.23) (xy 168.91 63.5)
+			(xy 158.75 63.5) (xy 170.18 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3afae04e-fa57-44a0-9076-7200acf8ccf6")
+		(uuid "39a8e5f3-ba93-4498-a31a-1359b95ffe38")
 	)
 	(wire
 		(pts
-			(xy 161.29 72.39) (xy 168.91 72.39)
+			(xy 165.1 66.04) (xy 165.1 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3cd1cfd1-22a5-4c3a-8c46-7cf7aea6819f")
+		(uuid "3e424ecf-cf97-4cb3-be52-fe21ee0c1cef")
 	)
 	(wire
 		(pts
-			(xy 161.29 49.53) (xy 161.29 39.37)
+			(xy 146.05 39.37) (xy 146.05 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3dc4cef2-4d79-4efe-ab87-2b1f0abff4bc")
+		(uuid "41257ca7-0ef4-4d36-a3a6-40d0a64bd482")
 	)
 	(wire
 		(pts
-			(xy 111.76 120.65) (xy 127 120.65)
+			(xy 132.08 124.46) (xy 132.08 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3e9ebcc7-cc98-4a72-b778-5dca91c0df08")
+		(uuid "4b6dbbc3-8981-425a-921a-1b6865c6672e")
 	)
 	(wire
 		(pts
-			(xy 157.48 106.68) (xy 162.56 106.68)
+			(xy 115.57 116.84) (xy 133.35 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "42f29308-ce41-48ca-98aa-6ea4fba168de")
+		(uuid "4df3305c-85a0-4136-965b-ae891727592b")
 	)
 	(wire
 		(pts
-			(xy 124.46 128.27) (xy 127 128.27)
+			(xy 170.18 80.01) (xy 177.8 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "46f6a226-ac57-4c31-8754-5b63400408e6")
+		(uuid "4e09c8df-e977-402d-b942-a112938ef6af")
 	)
 	(wire
 		(pts
-			(xy 157.48 125.73) (xy 157.48 139.7)
+			(xy 170.18 46.99) (xy 177.8 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4752b80d-2322-4b0e-9a56-5351ab6a21db")
+		(uuid "4f84c476-e4ed-4357-a84f-e52ef3fd29c4")
 	)
 	(wire
 		(pts
-			(xy 157.48 120.65) (xy 157.48 106.68)
+			(xy 140.97 41.91) (xy 146.05 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4daa79a2-da45-46da-9da9-84613d8b5e94")
+		(uuid "50943701-5ea2-4316-b1c9-dd84e7b91aee")
 	)
 	(wire
 		(pts
-			(xy 133.35 34.29) (xy 133.35 33.02)
+			(xy 115.57 58.42) (xy 133.35 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4e0c351e-da7d-402b-8933-b778594c5778")
+		(uuid "681977eb-f71d-4aac-9a9f-fa15fa62880e")
 	)
 	(wire
 		(pts
-			(xy 114.3 67.31) (xy 114.3 68.58)
+			(xy 170.18 63.5) (xy 170.18 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4e4a4165-3264-495e-947a-9096edadb76d")
+		(uuid "79642f93-d49e-4193-b256-d12e8127fc70")
 	)
 	(wire
 		(pts
-			(xy 168.91 57.15) (xy 168.91 55.88)
+			(xy 165.1 46.99) (xy 170.18 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4e63929b-6c0a-402b-9faa-f3fada5d08d5")
+		(uuid "7ed775b8-d518-4327-b764-6b2c2fffaad4")
 	)
 	(wire
 		(pts
-			(xy 162.56 123.19) (xy 170.18 123.19)
+			(xy 170.18 69.85) (xy 170.18 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "59913cf2-ee27-45bb-9e09-63b9500a0778")
+		(uuid "82d3225e-19c3-4c1e-9c0c-1f7247d765e7")
 	)
 	(wire
 		(pts
-			(xy 157.48 139.7) (xy 162.56 139.7)
+			(xy 165.1 102.87) (xy 170.18 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "65dd86a1-35c9-4862-97f2-8363e6e08a7a")
+		(uuid "85a0caaf-96bc-4700-b097-206354c81cad")
 	)
 	(wire
 		(pts
-			(xy 162.56 139.7) (xy 170.18 139.7)
+			(xy 170.18 102.87) (xy 177.8 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "68f96c74-63d5-4b59-809e-dbe72c14cd37")
+		(uuid "88bc60c4-ba18-432e-8d88-2395d550e5f1")
 	)
 	(wire
 		(pts
-			(xy 139.7 133.35) (xy 139.7 135.89)
+			(xy 115.57 114.3) (xy 133.35 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6a3567f7-59de-4762-b81b-fd1615258c8a")
+		(uuid "8a0b6f50-47c3-46d8-a68e-80fd75fcfbaa")
 	)
 	(wire
 		(pts
-			(xy 156.21 53.34) (xy 156.21 39.37)
+			(xy 177.8 125.73) (xy 177.8 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "758f937d-4dcb-4a14-9821-17e517caedc3")
+		(uuid "8f2f886b-ef04-47aa-b112-46552d4bf70d")
 	)
 	(wire
 		(pts
-			(xy 124.46 130.81) (xy 124.46 128.27)
+			(xy 140.97 43.18) (xy 140.97 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "794f0c5b-8613-44f8-9937-cebb3ffae9ae")
+		(uuid "8fd319fd-44a8-4a33-a2bb-ac26d337df4b")
 	)
 	(wire
 		(pts
-			(xy 162.56 116.84) (xy 162.56 106.68)
+			(xy 170.18 135.89) (xy 177.8 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "84604683-89cb-433e-a1d9-a6551f928b2a")
+		(uuid "91aabde9-6c68-4599-a1be-ad4d3f58e081")
 	)
 	(wire
 		(pts
-			(xy 161.29 39.37) (xy 168.91 39.37)
+			(xy 115.57 60.96) (xy 133.35 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "86a68a49-877d-49cd-a7aa-3648b5855b66")
+		(uuid "95089578-caaf-4ada-acb2-bdde60fe63aa")
 	)
 	(wire
 		(pts
-			(xy 161.29 62.23) (xy 161.29 72.39)
+			(xy 158.75 121.92) (xy 165.1 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "87afa1a3-365e-4e48-aab5-94a3bdf5d394")
+		(uuid "9e5b4e96-0159-453c-80bb-e3d0787dfb6b")
 	)
 	(wire
 		(pts
-			(xy 110.49 50.8) (xy 125.73 50.8)
+			(xy 170.18 63.5) (xy 177.8 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "88dc59c9-2c39-4945-bb63-0b2daff28a20")
+		(uuid "a1aeb89d-314a-4468-a28e-14aeba6b34a4")
 	)
 	(wire
 		(pts
-			(xy 152.4 125.73) (xy 157.48 125.73)
+			(xy 177.8 69.85) (xy 177.8 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c9a4563-d302-4f91-b986-70be804e81ae")
+		(uuid "a93ffc6c-775f-4252-a1b7-323c7864eb5b")
 	)
 	(wire
 		(pts
-			(xy 170.18 124.46) (xy 170.18 123.19)
+			(xy 165.1 116.84) (xy 165.1 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8e0ea2f3-11ee-4fdc-b62a-3bf8ba36894c")
+		(uuid "abf0f477-a9cf-4983-b3b3-52625801ab4f")
 	)
 	(wire
 		(pts
-			(xy 139.7 100.33) (xy 139.7 113.03)
+			(xy 158.75 119.38) (xy 170.18 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8e0ee178-8206-42f1-a8c5-1efadf1a5463")
+		(uuid "ac7c9791-326a-4647-bd38-02748eeba854")
 	)
 	(wire
 		(pts
-			(xy 161.29 55.88) (xy 168.91 55.88)
+			(xy 132.08 68.58) (xy 132.08 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9041d157-22b0-4d28-abf7-dc1ad708f188")
+		(uuid "aca5b5e5-ef7d-4835-9372-2b4d3cdb6bdc")
 	)
 	(wire
 		(pts
-			(xy 133.35 39.37) (xy 133.35 40.64)
+			(xy 170.18 62.23) (xy 170.18 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "91781f2a-6dee-4430-9d27-95a4a6510f92")
+		(uuid "bb13b7bd-2b8e-4465-8999-ebdb015e0258")
 	)
 	(wire
 		(pts
-			(xy 151.13 53.34) (xy 156.21 53.34)
+			(xy 146.05 41.91) (xy 146.05 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "91b22870-1ab0-4d24-b848-de0b77d615b7")
+		(uuid "bc2ff30e-2598-43a6-97ae-77a53e1658db")
 	)
 	(wire
 		(pts
-			(xy 134.62 106.68) (xy 134.62 107.95)
+			(xy 146.05 97.79) (xy 146.05 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "94bc1a68-ca8c-4618-a039-8cc90887b59d")
+		(uuid "c44a2d3d-29cd-4f4a-ab79-5714b35d3211")
 	)
 	(wire
 		(pts
-			(xy 123.19 63.5) (xy 123.19 60.96)
+			(xy 170.18 125.73) (xy 170.18 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9a456f76-8495-4f93-aea5-4a1d6c46e64a")
+		(uuid "cf607923-3e95-456c-ad2b-77e2d23e4582")
 	)
 	(wire
 		(pts
-			(xy 138.43 30.48) (xy 138.43 33.02)
+			(xy 158.75 60.96) (xy 165.1 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9dacd141-3908-4d19-8b8b-fe44edf16502")
+		(uuid "d210f7ec-4df4-4d2f-a5d3-4bce6f97ff5a")
 	)
 	(wire
 		(pts
-			(xy 151.13 58.42) (xy 156.21 58.42)
+			(xy 140.97 97.79) (xy 146.05 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a3711505-9943-4124-bb97-ccfbcef676f6")
+		(uuid "dbdcdde0-796d-4465-9450-cc0df71386d4")
 	)
 	(wire
 		(pts
-			(xy 170.18 129.54) (xy 170.18 130.81)
+			(xy 170.18 119.38) (xy 170.18 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a9bf8313-b2a5-4b3f-bcff-bef95d7758dd")
+		(uuid "dcc77eb8-760c-427c-b048-5ea12be00f83")
 	)
 	(wire
 		(pts
-			(xy 123.19 60.96) (xy 125.73 60.96)
+			(xy 132.08 68.58) (xy 133.35 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac69c69a-10c8-4e28-bf97-de0c470deced")
+		(uuid "dff62644-3a86-4e93-b5ee-df0c3e64d57f")
 	)
 	(wire
 		(pts
-			(xy 161.29 55.88) (xy 161.29 57.15)
+			(xy 165.1 60.96) (xy 165.1 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b81200c4-6280-46d5-8260-e10add963cfd")
+		(uuid "e03e729e-4014-4cf7-bb0f-62b4939593b0")
 	)
 	(wire
 		(pts
-			(xy 138.43 66.04) (xy 138.43 68.58)
+			(xy 170.18 113.03) (xy 170.18 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c52d0329-515b-4e57-bef2-f6bc0fe1c2f1")
+		(uuid "e7146cae-d034-4a66-8a12-dc5fbacf7298")
 	)
 	(wire
 		(pts
-			(xy 111.76 118.11) (xy 127 118.11)
+			(xy 177.8 120.65) (xy 177.8 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d0bfedbd-1dbe-44a3-a61a-10417949c3b6")
+		(uuid "ee379385-f2e9-409b-99e5-74e6e76ec41d")
 	)
 	(wire
 		(pts
-			(xy 162.56 121.92) (xy 162.56 123.19)
+			(xy 132.08 124.46) (xy 133.35 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d11fd098-ec55-4984-8024-e70052d280b9")
+		(uuid "fd7965c7-a2ca-45d9-adc1-e9014173cc9a")
 	)
 	(wire
 		(pts
-			(xy 156.21 72.39) (xy 161.29 72.39)
+			(xy 165.1 135.89) (xy 170.18 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d7509f59-c74e-4da2-888d-aa43d63c905a")
+		(uuid "fe05e7a4-8d0e-43e7-aab5-7d8c04ff506f")
 	)
-	(wire
-		(pts
-			(xy 134.62 100.33) (xy 139.7 100.33)
+	(label "CAN0_TX"
+		(at 115.57 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db260373-20ea-4117-9325-20ffee543fae")
+		(uuid "3ea69fdf-206e-4b63-a2bb-4f2fc0011f35")
 	)
-	(wire
-		(pts
-			(xy 115.57 134.62) (xy 115.57 135.89)
+	(label "CAN1_RX"
+		(at 115.57 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e10f4f4e-5e6b-4541-bf31-ffa175eb0f65")
+		(uuid "90d34989-b00d-4a1f-8d2f-139f1d2a9a59")
 	)
-	(wire
-		(pts
-			(xy 162.56 106.68) (xy 170.18 106.68)
+	(label "CAN1_TX"
+		(at 115.57 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7a78c1e-2707-4218-85f5-5bf1b8854775")
+		(uuid "b72e540b-7a57-4014-9024-afbec0bd771f")
 	)
-	(wire
-		(pts
-			(xy 134.62 101.6) (xy 134.62 100.33)
+	(label "CAN0_RX"
+		(at 115.57 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed8c9a98-aecf-4de0-a4a2-8dc87e85577b")
+		(uuid "e84b9d8d-a419-4151-8df2-db43acaa8089")
 	)
-	(wire
-		(pts
-			(xy 115.57 129.54) (xy 115.57 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f166b2c3-a233-4de5-b224-ef67bd7639ce")
-	)
-	(wire
-		(pts
-			(xy 133.35 33.02) (xy 138.43 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8d41d9c-c6f3-4ed7-af63-267f92f27956")
-	)
-	(wire
-		(pts
-			(xy 162.56 129.54) (xy 162.56 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9f851b3-49c1-455f-ba63-4f6ea026af31")
-	)
-	(wire
-		(pts
-			(xy 161.29 54.61) (xy 161.29 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc71f147-f6c3-4f5a-a08b-c948ed1ce038")
-	)
-	(global_label "2_CANL"
+	(global_label "1_CANL"
 		(shape input)
-		(at 168.91 72.39 0)
+		(at 177.8 135.89 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1358,9 +1379,9 @@
 			)
 			(justify left)
 		)
-		(uuid "1f26492d-2d66-4389-911e-65340802b813")
+		(uuid "059da210-c474-42a3-815b-84a58b71a645")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.7895 72.39 0)
+			(at 187.6795 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1370,9 +1391,9 @@
 			)
 		)
 	)
-	(global_label "2_CANH"
+	(global_label "0_CANL"
 		(shape input)
-		(at 168.91 39.37 0)
+		(at 177.8 80.01 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1380,9 +1401,9 @@
 			)
 			(justify left)
 		)
-		(uuid "296b75c8-a15c-40c8-90c7-ac0dd6660a93")
+		(uuid "2e89cb14-ad1d-4541-837b-c9f29d537844")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.0919 39.37 0)
+			(at 187.6795 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1392,9 +1413,9 @@
 			)
 		)
 	)
-	(global_label "2_CANL"
+	(global_label "0_CANH"
 		(shape input)
-		(at 170.18 139.7 0)
+		(at 177.8 46.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1402,9 +1423,9 @@
 			)
 			(justify left)
 		)
-		(uuid "2baccffa-c0d6-4f26-b63d-8fb55a590ed4")
+		(uuid "90f75ece-ad16-44c9-9124-9fe4106c3da2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.0595 139.7 0)
+			(at 187.9819 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1414,31 +1435,9 @@
 			)
 		)
 	)
-	(global_label "MCU_CAN2_TX"
+	(global_label "1_CANH"
 		(shape input)
-		(at 110.49 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "706a1172-2a1b-4090-947a-1ab15d593648")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 94.442 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "2_CANH"
-		(shape input)
-		(at 170.18 106.68 0)
+		(at 177.8 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1446,97 +1445,49 @@
 			)
 			(justify left)
 		)
-		(uuid "a1c5c5fb-5841-4d9d-98ff-2b0d19b05ad8")
+		(uuid "f7cebcf8-d5df-40ae-889a-e14675121e17")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.3619 106.68 0)
+			(at 187.9819 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "MCU_CAN2_RX"
-		(shape input)
-		(at 111.76 120.65 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c2721519-8a8a-4ecb-af5a-67b5b72407f1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.4096 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "MCU_CAN2_RX"
-		(shape input)
-		(at 110.49 53.34 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d52ff6d6-0e96-46d5-990d-c9d4eb8d3575")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 94.1396 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "MCU_CAN2_TX"
-		(shape input)
-		(at 111.76 118.11 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ecd1ae6d-6aa1-40e6-b267-0a24e35b1ff4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.712 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 115.57 135.89 0)
+		(lib_id "Device:C_Small")
+		(at 140.97 45.72 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0d8da749-c328-4b9f-93fa-2fde3d12993b")
-		(property "Reference" "#PWR01"
-			(at 115.57 142.24 0)
+		(uuid "00a4b615-8c2d-475d-94c4-bf5ba08c4314")
+		(property "Reference" "C53"
+			(at 138.43 44.4435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 138.43 46.9835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 140.97 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1544,16 +1495,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 115.57 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 135.89 0)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
+			(at 140.97 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1561,8 +1504,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 115.57 135.89 0)
+		(property "Description" ""
+			(at 140.97 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "False"
+			(at 140.97 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1570,8 +1521,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 115.57 135.89 0)
+		(property "Order Code" "80-C0805C104K5RACLR"
+			(at 140.97 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 140.97 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1580,12 +1540,240 @@
 			)
 		)
 		(pin "1"
-			(uuid "26222006-c04a-438d-a15f-e07131c9f65a")
+			(uuid "3c59efb2-67d2-4832-8b8e-5cd7363ac3ad")
+		)
+		(pin "2"
+			(uuid "a7b2e407-017c-4e6c-b924-3c618b611907")
 		)
 		(instances
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR01")
+					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 146.05 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "17885605-1d64-4bda-a6d9-58d29eee163d")
+		(property "Reference" "#PWR0128"
+			(at 146.05 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 146.05 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 146.05 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a07f5ced-281c-4d90-a8f6-8013b07c77cc")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Interface_CAN_LIN:LTC2875-DD")
+		(at 146.05 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b150714-dcf9-4f70-8c09-78487aa1d9c9")
+		(property "Reference" "U14"
+			(at 148.1933 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LTC2875-DD"
+			(at 148.1933 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm"
+			(at 146.05 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/2875f.pdf"
+			(at 146.05 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High-Speed CAN Transceiver, 4Mbps, 3.3V or 5V supply, DFN-8"
+			(at 146.05 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "5f81e192-5466-49c7-9291-67734d934a86")
+		)
+		(pin "9"
+			(uuid "61211329-b2cb-4825-a2ab-9fa2a4155b2b")
+		)
+		(pin "1"
+			(uuid "a77deaba-cf0a-4da3-b260-7b6e873aea7a")
+		)
+		(pin "6"
+			(uuid "093bb171-b7e9-4129-b163-4339b19b741a")
+		)
+		(pin "2"
+			(uuid "93a039e1-2e9b-4539-86cb-14a99672d893")
+		)
+		(pin "4"
+			(uuid "54438c41-4281-4f9d-993e-2d1b50a55e4f")
+		)
+		(pin "8"
+			(uuid "f429b173-80d5-4d7a-972f-15889257b8b8")
+		)
+		(pin "5"
+			(uuid "19a58b19-689d-4d68-a6eb-85cc041eabdf")
+		)
+		(pin "3"
+			(uuid "0efa83a6-fe65-444e-a68c-4d80541081c3")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 140.97 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2519fe2a-4bb4-4282-8dd0-7f5364ee0da9")
+		(property "Reference" "#PWR0126"
+			(at 140.97 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7a9d2a9-9d35-4734-b9cd-057bceff428d")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0126")
 					(unit 1)
 				)
 			)
@@ -1593,16 +1781,275 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 168.91 59.69 0)
+		(at 140.97 101.6 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "174b8b6e-e5bd-4830-8bd4-e2cd47dab4c0")
-		(property "Reference" "C65"
-			(at 171.45 58.4262 0)
+		(uuid "2c276c61-d177-4bd9-b46e-90f245382509")
+		(property "Reference" "C54"
+			(at 138.43 100.3235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 138.43 102.8635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "False"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" "80-C0805C104K5RACLR"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 140.97 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0d1ee8e-b2bd-4faa-ae24-cb9070d1efe7")
+		)
+		(pin "2"
+			(uuid "9b11142d-8463-485f-aa09-e5f33e007076")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "C54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 177.8 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "356d90fe-a86e-46f5-9d83-e2dd3db0cae5")
+		(property "Reference" "#PWR0132"
+			(at 177.8 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05343b6b-1abe-437b-b874-522505a65d02")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0132")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.18 123.19 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44ccf31a-6901-463a-beca-9124b5607bfb")
+		(property "Reference" "R91"
+			(at 171.45 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "60R"
+			(at 171.45 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "True"
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 170.18 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43bbdb6c-5a7d-4301-b814-2447433d8401")
+		)
+		(pin "2"
+			(uuid "0a42cff9-088e-46b5-999a-d0125ebe74c7")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "R91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 177.8 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "497f3082-4757-4535-b80d-2d51d5efb796")
+		(property "Reference" "C56"
+			(at 180.34 121.9262 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1611,7 +2058,7 @@
 			)
 		)
 		(property "Value" "4.7n"
-			(at 171.45 60.9662 0)
+			(at 180.34 124.4662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1619,8 +2066,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 168.91 59.69 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1629,7 +2076,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/1/KEM_C1076_X7R_HV_AUTO_SMD-1093301.pdf"
-			(at 168.91 59.69 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1638,7 +2085,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.91 59.69 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1646,7 +2093,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 168.91 59.69 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1655,7 +2102,7 @@
 			)
 		)
 		(property "Order Code" "80-C0805C472KBRAUTO"
-			(at 168.91 59.69 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1664,7 +2111,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 168.91 59.69 0)
+			(at 177.8 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1673,496 +2120,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "d09fca61-4f0a-4fc9-be58-1dfb0b1439af")
+			(uuid "82f72817-a462-4387-9f69-40cef4339f18")
 		)
 		(pin "2"
-			(uuid "067f4643-9a23-4976-8754-01d79aea9a0e")
+			(uuid "6dc6d8cc-3934-4684-ac9d-648613945f04")
 		)
 		(instances
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C65")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 115.57 132.08 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1c67eaed-98af-4f6c-95f3-59088541fbc0")
-		(property "Reference" "C1"
-			(at 113.03 130.8035 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100n"
-			(at 113.03 133.3435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "False"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "80-C0805C104K5RACLR"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9f7ebf7d-4f22-4299-8914-2f22d875b087")
-		)
-		(pin "2"
-			(uuid "43b4fd4c-0b04-433f-91b0-658e480963dc")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 134.62 104.14 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26d255b1-e148-4a88-ab9f-b0583742b9a4")
-		(property "Reference" "C2"
-			(at 132.08 102.8635 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100n"
-			(at 132.08 105.4035 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "False"
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "80-C0805C104K5RACLR"
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 134.62 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dd098852-915f-4d2e-9c3b-ef2e6a9cc96d")
-		)
-		(pin "2"
-			(uuid "0fe98921-ee1e-4a2e-99f7-4450a0446f0e")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 114.3 64.77 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "38ffdb45-633c-4eca-bf91-c90a0232b8be")
-		(property "Reference" "C63"
-			(at 111.76 63.4935 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100n"
-			(at 111.76 66.0335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "False"
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "80-C0805C104K5RACLR"
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 114.3 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "36624527-2e7b-4473-bae4-13814788cf1a")
-		)
-		(pin "2"
-			(uuid "85b54b4c-3872-4956-8223-947de2609cc1")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C63")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 162.56 127 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3f51816a-cbfe-44c3-a8a3-b0b3d5ba28dc")
-		(property "Reference" "R2"
-			(at 163.83 126.365 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "60R"
-			(at 163.83 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "True"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4dfa3ffd-09f2-4709-8480-57f2724152fd")
-		)
-		(pin "2"
-			(uuid "0c333b47-1669-41b9-bea3-8c4339ce1c5f")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 162.56 119.38 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4c479d1d-9c19-4176-ba99-0d0a8651bb88")
-		(property "Reference" "R1"
-			(at 163.83 118.745 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "60R"
-			(at 163.83 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "True"
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 162.56 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "80ed8bfb-dd0a-4f3d-85aa-24146d5df946")
-		)
-		(pin "2"
-			(uuid "8ac302c7-b479-4326-b20d-add00e454cfd")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "R1")
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -2171,16 +2137,16 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 138.43 68.58 0)
+		(at 132.08 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5892a688-b0d3-485a-a05d-f0c4cbf1270c")
-		(property "Reference" "#PWR0127"
-			(at 138.43 74.93 0)
+		(uuid "575d92c8-aa3d-4245-bb35-84a2ee7ed33f")
+		(property "Reference" "#PWR0125"
+			(at 132.08 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2189,7 +2155,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 138.43 73.66 0)
+			(at 132.08 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,7 +2163,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 68.58 0)
+			(at 132.08 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2206,7 +2172,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 138.43 68.58 0)
+			(at 132.08 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2215,7 +2181,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 138.43 68.58 0)
+			(at 132.08 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2224,7 +2190,425 @@
 			)
 		)
 		(pin "1"
-			(uuid "6670642b-d101-48a0-973a-41c7d5ce473b")
+			(uuid "ca9b124e-a480-49de-a7d0-52d61736187d")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 146.05 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70c53e1b-cd09-4c36-bb13-f89bc112ea3e")
+		(property "Reference" "#PWR0130"
+			(at 146.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 146.05 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 146.05 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02876365-bccf-422a-97ab-ff9412481cfd")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0130")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.18 67.31 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "73fb72a6-588b-4e0d-af84-fc2d2cc06462")
+		(property "Reference" "R89"
+			(at 171.45 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "60R"
+			(at 171.45 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "True"
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 170.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69137fbe-2465-4b85-92e8-c753be099a70")
+		)
+		(pin "2"
+			(uuid "4f0da7fd-67c4-44bf-80bf-6b1e30def4f7")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "R89")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.18 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d3cd632-e6ee-445e-85e2-8b7946d0841b")
+		(property "Reference" "R88"
+			(at 171.45 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "60R"
+			(at 171.45 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "True"
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 170.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "71738b3d-68c0-43a0-b6a1-7c762e59ff19")
+		)
+		(pin "2"
+			(uuid "be5c0938-28ec-4fea-98c2-c0fb7b40e1a4")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "R88")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 170.18 115.57 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91975069-224e-487a-9bb9-5c9d1e0d3277")
+		(property "Reference" "R90"
+			(at 171.45 114.935 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "60R"
+			(at 171.45 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Optional" "True"
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Order Code" ""
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Mouser"
+			(at 170.18 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eca99114-fa8e-4471-af69-c1df24c9f709")
+		)
+		(pin "2"
+			(uuid "2dda1fad-8d73-4bd7-b27d-a9881e99cbcb")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "R90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 140.97 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0dbe597-bfc5-4964-b4b6-f2fa82cbbb59")
+		(property "Reference" "#PWR0127"
+			(at 140.97 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a44fce4-7781-422c-921e-d3ff0715355b")
 		)
 		(instances
 			(project "CANna-VCU"
@@ -2238,16 +2622,16 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 133.35 40.64 0)
+		(at 146.05 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "72507bb9-3212-4269-88c5-fe55ccbbdd8d")
-		(property "Reference" "#PWR0125"
-			(at 133.35 46.99 0)
+		(uuid "d64b68cd-3054-478c-804e-c5e01d4ddef8")
+		(property "Reference" "#PWR0129"
+			(at 146.05 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2256,7 +2640,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 45.72 0)
+			(at 146.05 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2264,7 +2648,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 40.64 0)
+			(at 146.05 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2273,7 +2657,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 40.64 0)
+			(at 146.05 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2282,7 +2666,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 40.64 0)
+			(at 146.05 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2291,12 +2675,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "04bee32c-7ccc-4451-bde2-e2baf6573cfc")
+			(uuid "04e69a8e-6446-41e5-8f92-7b3ab9fb3d38")
 		)
 		(instances
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR0125")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -2305,16 +2689,16 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 123.19 63.5 0)
+		(at 177.8 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "85904812-b8df-4573-ba02-43976b12b7f4")
-		(property "Reference" "#PWR0124"
-			(at 123.19 69.85 0)
+		(uuid "d8817d82-7383-48c3-a6bd-478ae6aa1510")
+		(property "Reference" "#PWR0133"
+			(at 177.8 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,7 +2707,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.19 68.58 0)
+			(at 177.8 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2331,7 +2715,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 63.5 0)
+			(at 177.8 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2340,7 +2724,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 63.5 0)
+			(at 177.8 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2349,7 +2733,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 63.5 0)
+			(at 177.8 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2358,7 +2742,233 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac5ec639-67cb-4be1-95c7-db1d09aae597")
+			(uuid "aa5be842-6132-47b4-91ac-d87e7e757f6e")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0133")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 146.05 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db74369e-c51f-4cf4-a58a-f3ce537215f4")
+		(property "Reference" "#PWR0131"
+			(at 146.05 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 146.05 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc453fce-9bfc-40a3-ba69-38d3b86da83f")
+		)
+		(instances
+			(project "CANna-VCU"
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Interface_CAN_LIN:LTC2875-DD")
+		(at 146.05 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd51f66b-4eed-42e7-975e-85ee9607395e")
+		(property "Reference" "U13"
+			(at 148.1933 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LTC2875-DD"
+			(at 148.1933 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm"
+			(at 146.05 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/2875f.pdf"
+			(at 146.05 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High-Speed CAN Transceiver, 4Mbps, 3.3V or 5V supply, DFN-8"
+			(at 146.05 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "daf23ef1-fbca-400b-91c6-79683f94428d")
+		)
+		(pin "9"
+			(uuid "df8fa839-a9b9-4f08-bc3a-631d2cb71d29")
+		)
+		(pin "1"
+			(uuid "57621473-b829-434d-b46a-aabe429ccff0")
+		)
+		(pin "6"
+			(uuid "dd2c5e76-e414-45a1-8a59-4378f880696a")
+		)
+		(pin "2"
+			(uuid "c7b1d558-4d60-41b8-9f83-45db9101f58a")
+		)
+		(pin "4"
+			(uuid "8a438724-2c56-414d-bd11-14c331d14859")
+		)
+		(pin "8"
+			(uuid "d08cae82-9c04-4648-bce6-fa8d872debaa")
+		)
+		(pin "5"
+			(uuid "4bb0c728-721e-4508-b85b-f42d65f57b2e")
+		)
+		(pin "3"
+			(uuid "9d14efda-59d9-44dc-a3a9-b9109d219995")
+		)
+		(instances
+			(project ""
+				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 132.08 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef135cf8-a58d-4c7f-8b7a-908cdddaf0b3")
+		(property "Reference" "#PWR0124"
+			(at 132.08 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 132.08 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49754f85-a97f-4138-a21e-c2ddf99a295b")
 		)
 		(instances
 			(project "CANna-VCU"
@@ -2370,881 +2980,17 @@
 		)
 	)
 	(symbol
-		(lib_id "SUFST:TCAN34004-Q1")
-		(at 138.43 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8b99c4bf-3216-4923-99ec-c3969e72c218")
-		(property "Reference" "U2"
-			(at 140.5733 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TCAN3400-Q1"
-			(at 140.5733 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 138.43 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tcan3404-q1.pdf?ts=1762412095981&ref_url=https%253A%252F%252Fwww.mouser.de%252F"
-			(at 138.43 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAN Tranceiver 58V Tolerant"
-			(at 138.43 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "b4b9b2f9-3ee9-4637-8f1b-cc98640d47ac")
-		)
-		(pin "4"
-			(uuid "fa75393e-f514-4b9f-a916-70e2f79db3be")
-		)
-		(pin "8"
-			(uuid "eb2076d6-cef2-4f5b-9ad6-73cd70d609d8")
-		)
-		(pin "2"
-			(uuid "81471e80-c217-4421-8361-0f4eab16aa02")
-		)
-		(pin "1"
-			(uuid "1507860e-aca2-4293-b4f2-8bac1b95803a")
-		)
-		(pin "7"
-			(uuid "08094389-1df7-440d-b888-e805de3091f9")
-		)
-		(pin "6"
-			(uuid "59a69b3b-b2f0-4f35-b441-237aa1e7b7ee")
-		)
-		(pin "5"
-			(uuid "524c300d-2270-43b4-a21b-b6206f05eb69")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 139.7 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "915aa2c5-569b-4d9f-9d95-1bc68cd39dbf")
-		(property "Reference" "#PWR05"
-			(at 139.7 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 139.7 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a1349c8f-1f09-4821-adcb-66d4eeaa83de")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 134.62 107.95 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9795d6a1-7e9b-405c-b6c4-5b1b535d7635")
-		(property "Reference" "#PWR03"
-			(at 134.62 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.62 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 134.62 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 134.62 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 134.62 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "800d8288-65d1-4d1c-bc2a-36efb407481e")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SUFST:TCAN34004-Q1")
-		(at 139.7 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a1eef050-6a22-4f98-b654-ccaa2c95ebdd")
-		(property "Reference" "U1"
-			(at 141.8433 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TCAN3400-Q1"
-			(at 141.8433 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 139.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tcan3404-q1.pdf?ts=1762412095981&ref_url=https%253A%252F%252Fwww.mouser.de%252F"
-			(at 139.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAN Tranceiver 58V Tolerant"
-			(at 139.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "95ec4345-7938-457a-bb47-fe25928bc857")
-		)
-		(pin "4"
-			(uuid "2d702e1c-29ff-42f5-9ddc-54cc63f5533d")
-		)
-		(pin "8"
-			(uuid "ed37e5e0-2ca7-44b9-baa7-24ede829b5f0")
-		)
-		(pin "2"
-			(uuid "8d2f4c56-5b96-4292-9749-2675fb0b6405")
-		)
-		(pin "1"
-			(uuid "93b0d750-10cf-48f1-bdb5-3237cee0b05e")
-		)
-		(pin "7"
-			(uuid "eb2ce09d-04df-49b1-a7e6-d5d58a79c14d")
-		)
-		(pin "6"
-			(uuid "b936b15f-3c28-4c46-8e8c-ca023df15221")
-		)
-		(pin "5"
-			(uuid "9c9d683d-9d2d-46f8-b0f3-b5b906d7ba96")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
-		(at 133.35 36.83 0)
-		(mirror x)
+		(at 177.8 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b43be940-a636-4c1b-a4b4-832e1493a25d")
-		(property "Reference" "C64"
-			(at 130.81 35.5535 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100n"
-			(at 130.81 38.0935 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/KEM_C1002_X7R_SMD-1102033.pdf"
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "False"
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" "80-C0805C104K5RACLR"
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 133.35 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "80a1a679-1dae-462c-aa30-6ce3528d8768")
-		)
-		(pin "2"
-			(uuid "a3438d96-e18b-4bfb-812b-487d124ab195")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C64")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 114.3 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bc6b5e6d-eb13-45c5-92b8-1a8451e08c0c")
-		(property "Reference" "#PWR0123"
-			(at 114.3 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 114.3 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 114.3 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7122fa29-9cfb-45ab-a947-ddadd12004d3")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR0123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 161.29 59.69 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bfe97333-c2cf-4fab-9b3f-0834f4bf2c31")
-		(property "Reference" "R11"
-			(at 162.56 59.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "60R"
-			(at 162.56 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "True"
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 161.29 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e8ff5f73-1192-4811-98da-27abe2c7a885")
-		)
-		(pin "2"
-			(uuid "d03924ff-a41d-41ca-b95f-aad16de85f94")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 139.7 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c46f8f31-c7d4-43f3-9c3a-6939ca01f1f8")
-		(property "Reference" "#PWR04"
-			(at 139.7 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 139.7 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "90b77e0e-9d31-495f-a682-5741b8c5e2b4")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 161.29 52.07 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cb8ca537-d31c-41bd-8b3f-5904f4906b9c")
-		(property "Reference" "R10"
-			(at 162.56 51.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "60R"
-			(at 162.56 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/427/dcrcwife3-1761849.pdf"
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Optional" "True"
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Order Code" ""
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Mouser"
-			(at 161.29 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c114a724-0be4-48f7-bb17-8f3092f6dfb0")
-		)
-		(pin "2"
-			(uuid "838008c4-4b35-495c-8a4c-ffc58616e21d")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 170.18 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3ae68bc-7334-42c2-9086-cf3e57b810f1")
-		(property "Reference" "#PWR06"
-			(at 170.18 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 170.18 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "96fbb22a-8ae1-419f-8507-8e70074288cf")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 168.91 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d61541b8-c480-4e8a-9804-373f3c2d0384")
-		(property "Reference" "#PWR0128"
-			(at 168.91 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 168.91 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.91 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 168.91 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 168.91 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b6db2d30-9d8a-4c64-9724-0312254d220a")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR0128")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 170.18 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea983535-9521-481d-a2d4-151fc1bfda5b")
-		(property "Reference" "C3"
-			(at 172.72 125.7362 0)
+		(uuid "f0933a4b-42a5-4f13-9ab5-c0ab6318ffe7")
+		(property "Reference" "C55"
+			(at 180.34 66.0462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3253,7 +2999,7 @@
 			)
 		)
 		(property "Value" "4.7n"
-			(at 172.72 128.2762 0)
+			(at 180.34 68.5862 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3261,8 +3007,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 170.18 127 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3271,7 +3017,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.co.uk/datasheet/2/212/1/KEM_C1076_X7R_HV_AUTO_SMD-1093301.pdf"
-			(at 170.18 127 0)
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3280,7 +3026,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 170.18 127 0)
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3288,7 +3034,7 @@
 			)
 		)
 		(property "Optional" "True"
-			(at 170.18 127 0)
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3297,7 +3043,7 @@
 			)
 		)
 		(property "Order Code" "80-C0805C472KBRAUTO"
-			(at 170.18 127 0)
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3306,7 +3052,7 @@
 			)
 		)
 		(property "Supplier" "Mouser"
-			(at 170.18 127 0)
+			(at 177.8 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3315,148 +3061,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "50a579ff-7dc6-44bc-a559-24a30b54c169")
+			(uuid "ba4b7ce9-7389-4c54-9ab0-6eaa92d8a04d")
 		)
 		(pin "2"
-			(uuid "918bfa8f-6ac3-4306-a8e7-f91b2a5290f6")
+			(uuid "93641cdb-3080-4730-91c9-1f7f50f4f12d")
 		)
 		(instances
 			(project "CANna-VCU"
 				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 124.46 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f3231676-e769-4bde-93c9-922232c8bf5d")
-		(property "Reference" "#PWR02"
-			(at 124.46 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 124.46 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.46 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 124.46 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 124.46 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "080eac16-3e7b-47fb-bfac-bfd4881b1ecd")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 138.43 30.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f413d085-a3fa-44ae-b3e7-2c50489ba80c")
-		(property "Reference" "#PWR0126"
-			(at 138.43 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 138.43 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 138.43 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 138.43 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e211e7a9-a0b7-48c2-bce7-c8e4f57420fe")
-		)
-		(instances
-			(project "CANna-VCU"
-				(path "/d2b041cf-e68d-49d7-b31d-fe6ebce83d7e/e20bcd50-e953-4e5c-b1c5-a9c9ec609e53"
-					(reference "#PWR0126")
+					(reference "C55")
 					(unit 1)
 				)
 			)

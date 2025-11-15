@@ -628,11 +628,15 @@
     ],
     [
       "1b41b139-095c-4084-b93a-58b03562937d",
-      "Protected IO"
+      "HSIO"
     ],
     [
       "e20bcd50-e953-4e5c-b1c5-a9c9ec609e53",
       "CAN"
+    ],
+    [
+      "b132a9b8-ee11-4a29-af0d-4f5f6d3f7470",
+      "LSIO"
     ]
   ],
   "text_variables": {}
