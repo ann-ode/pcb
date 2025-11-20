@@ -1142,6 +1142,16 @@
 		)
 		(uuid "ceac9bd3-a378-423b-9bfd-8708b1693fdf")
 	)
+	(text "change amp"
+		(exclude_from_sim no)
+		(at 74.168 39.878 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d6542ab4-f1f2-4af7-a8e6-93ae5b8622fd")
+	)
 	(text "Analogue (12V -> 3,3V)\n\n\n"
 		(exclude_from_sim no)
 		(at 34.29 36.195 0)
